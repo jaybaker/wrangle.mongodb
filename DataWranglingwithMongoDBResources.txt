@@ -1,0 +1,26 @@
+﻿Data Wrangling with MongoDB Resources
+Jay Baker
+
+
+xml.etree.elementtree tutorial
+https://docs.python.org/2/library/xml.etree.elementtree.html
+
+
+Python cvs
+https://docs.python.org/2/library/csv.html
+
+
+OSM Wiki
+http://wiki.openstreetmap.org/wiki/Main_Page
+
+
+PyMongo
+https://api.mongodb.org/python/current/
+
+
+Stackoverflow function for randomly selecting a document from a collection:
+http://stackoverflow.com/questions/20773645/how-to-find-random-records-in-mongodb
+and then execute:
+> var query = {'type':'node', 'address.postcode':{'$exists':1}};
+> var rand = function(){return Math.floor( Math.random() * count )}
+> db.osm.find(query).skip(rand()).limit(1)
